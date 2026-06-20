@@ -1,0 +1,72 @@
+package com.tr_es.dict.data.local.seed
+
+import com.tr_es.dict.data.local.entity.WordEntity
+
+internal object SeedNounsHome {
+    val items = listOf<WordEntity>(
+        // Ev ve mobilya
+        WordEntity(esWord = "cocina", trMeaning = "mutfak", partOfSpeech = "isim", pronunciation = "/koˈθina/", examples = """[{"es":"La cocina es moderna.","tr":"Mutfak modern."}]"""),
+        WordEntity(esWord = "habitación", trMeaning = "oda", partOfSpeech = "isim", pronunciation = "/aβitaˈθjon/", examples = """[{"es":"Mi habitación es pequeña.","tr":"Odam küçük."}]"""),
+        WordEntity(esWord = "dormitorio", trMeaning = "yatak odası", partOfSpeech = "isim", pronunciation = "/doɾmiˈtoɾjo/", examples = """[{"es":"El dormitorio es tranquilo.","tr":"Yatak odası sakin."}]"""),
+        WordEntity(esWord = "baño", trMeaning = "banyo, tuvalet", partOfSpeech = "isim", pronunciation = "/ˈbaɲo/", examples = """[{"es":"¿Dónde está el baño?","tr":"Tuvalet nerede?"}]"""),
+        WordEntity(esWord = "salón", trMeaning = "salon, oturma odası", partOfSpeech = "isim", pronunciation = "/saˈlon/", examples = """[{"es":"Vemos la tele en el salón.","tr":"Salonda televizyon izliyoruz."}]"""),
+        WordEntity(esWord = "cama", trMeaning = "yatak", partOfSpeech = "isim", pronunciation = "/ˈkama/", examples = """[{"es":"La cama es cómoda.","tr":"Yatak rahat."}]"""),
+        WordEntity(esWord = "sofá", trMeaning = "kanepe", partOfSpeech = "isim", pronunciation = "/soˈfa/", examples = """[{"es":"El sofá es muy blando.","tr":"Kanepe çok yumuşak."}]"""),
+        WordEntity(esWord = "armario", trMeaning = "dolap, gardırop", partOfSpeech = "isim", pronunciation = "/aɾˈmaɾjo/", examples = """[{"es":"La ropa está en el armario.","tr":"Kıyafetler dolapta."}]"""),
+        WordEntity(esWord = "espejo", trMeaning = "ayna", partOfSpeech = "isim", pronunciation = "/esˈpexo/", examples = """[{"es":"Me miro en el espejo.","tr":"Aynaya bakıyorum."}]"""),
+        WordEntity(esWord = "lámpara", trMeaning = "lamba", partOfSpeech = "isim", pronunciation = "/ˈlampaɾa/", examples = """[{"es":"Enciende la lámpara.","tr":"Lambayı yak."}]"""),
+        WordEntity(esWord = "reloj", trMeaning = "saat", partOfSpeech = "isim", pronunciation = "/reˈlox/", examples = """[{"es":"Mi reloj es nuevo.","tr":"Saatim yeni."}]"""),
+        WordEntity(esWord = "llave", trMeaning = "anahtar", partOfSpeech = "isim", pronunciation = "/ˈʎaβe/", examples = """[{"es":"No encuentro la llave.","tr":"Anahtarı bulamıyorum."}]"""),
+        WordEntity(esWord = "plato", trMeaning = "tabak, yemek", partOfSpeech = "isim", pronunciation = "/ˈplato/", examples = """[{"es":"El plato está vacío.","tr":"Tabak boş."}]"""),
+        WordEntity(esWord = "vaso", trMeaning = "bardak", partOfSpeech = "isim", pronunciation = "/ˈbaso/", examples = """[{"es":"Un vaso de agua, por favor.","tr":"Bir bardak su, lütfen."}]"""),
+        WordEntity(esWord = "taza", trMeaning = "fincan, kupa", partOfSpeech = "isim", pronunciation = "/ˈtaθa/", examples = """[{"es":"Una taza de café.","tr":"Bir fincan kahve."}]"""),
+        WordEntity(esWord = "cuchillo", trMeaning = "bıçak", partOfSpeech = "isim", pronunciation = "/kuˈtʃiʎo/", examples = """[{"es":"El cuchillo está afilado.","tr":"Bıçak keskin."}]"""),
+        WordEntity(esWord = "tenedor", trMeaning = "çatal", partOfSpeech = "isim", pronunciation = "/teneˈðoɾ/", examples = """[{"es":"Como con tenedor.","tr":"Çatalla yiyorum."}]"""),
+        WordEntity(esWord = "cuchara", trMeaning = "kaşık", partOfSpeech = "isim", pronunciation = "/kuˈtʃaɾa/", examples = """[{"es":"Necesito una cuchara para la sopa.","tr":"Çorba için bir kaşığa ihtiyacım var."}]"""),
+        WordEntity(esWord = "botella", trMeaning = "şişe", partOfSpeech = "isim", pronunciation = "/boˈteʎa/", examples = """[{"es":"La botella está llena.","tr":"Şişe dolu."}]"""),
+        WordEntity(esWord = "caja", trMeaning = "kutu", partOfSpeech = "isim", pronunciation = "/ˈkaxa/", examples = """[{"es":"La caja es pesada.","tr":"Kutu ağır."}]"""),
+        WordEntity(esWord = "papel", trMeaning = "kağıt", partOfSpeech = "isim", pronunciation = "/paˈpel/", examples = """[{"es":"Escribo en un papel.","tr":"Bir kağıda yazıyorum."}]"""),
+        WordEntity(esWord = "bolígrafo", trMeaning = "tükenmez kalem", partOfSpeech = "isim", pronunciation = "/boˈliɣɾafo/", examples = """[{"es":"Escribo con un bolígrafo azul.","tr":"Mavi bir tükenmez kalemle yazıyorum."}]"""),
+        WordEntity(esWord = "teléfono", trMeaning = "telefon", partOfSpeech = "isim", pronunciation = "/teˈlefono/", examples = """[{"es":"Mi teléfono no funciona.","tr":"Telefonum çalışmıyor."}]"""),
+        WordEntity(esWord = "ordenador", trMeaning = "bilgisayar", partOfSpeech = "isim", pronunciation = "/oɾðenaˈðoɾ/", examples = """[{"es":"Trabajo con el ordenador.","tr":"Bilgisayarla çalışıyorum."}]"""),
+        WordEntity(esWord = "televisión", trMeaning = "televizyon", partOfSpeech = "isim", pronunciation = "/teleβiˈsjon/", examples = """[{"es":"La televisión está encendida.","tr":"Televizyon açık."}]"""),
+        WordEntity(esWord = "ventilador", trMeaning = "vantilatör, fan", partOfSpeech = "isim", pronunciation = "/bentilaˈðoɾ/", examples = """[{"es":"El ventilador da aire fresco.","tr":"Vantilatör serin hava veriyor."}]"""),
+        WordEntity(esWord = "jardín", trMeaning = "bahçe", partOfSpeech = "isim", pronunciation = "/xaɾˈðin/", examples = """[{"es":"Tenemos un jardín bonito.","tr":"Güzel bir bahçemiz var."}]"""),
+        WordEntity(esWord = "techo", trMeaning = "çatı, tavan", partOfSpeech = "isim", pronunciation = "/ˈtetʃo/", examples = """[{"es":"El techo es alto.","tr":"Tavan yüksek."}]"""),
+        WordEntity(esWord = "pared", trMeaning = "duvar", partOfSpeech = "isim", pronunciation = "/paˈɾeð/", examples = """[{"es":"La pared es blanca.","tr":"Duvar beyaz."}]"""),
+        WordEntity(esWord = "suelo", trMeaning = "yer, zemin, döşeme", partOfSpeech = "isim", pronunciation = "/ˈswelo/", examples = """[{"es":"El suelo está limpio.","tr":"Yer temiz."}]"""),
+        WordEntity(esWord = "escalera", trMeaning = "merdiven", partOfSpeech = "isim", pronunciation = "/eskaˈleɾa/", examples = """[{"es":"Subo por la escalera.","tr":"Merdivenden çıkıyorum."}]"""),
+
+        // Giyim
+        WordEntity(esWord = "ropa", trMeaning = "giysi, kıyafet", partOfSpeech = "isim", pronunciation = "/ˈropa/", examples = """[{"es":"Lavo la ropa los sábados.","tr":"Cumartesileri kıyafet yıkarım."}]"""),
+        WordEntity(esWord = "camisa", trMeaning = "gömlek", partOfSpeech = "isim", pronunciation = "/kaˈmisa/", examples = """[{"es":"La camisa es blanca.","tr":"Gömlek beyaz."}]"""),
+        WordEntity(esWord = "camiseta", trMeaning = "tişört", partOfSpeech = "isim", pronunciation = "/kamiˈseta/", examples = """[{"es":"Llevo una camiseta azul.","tr":"Mavi bir tişört giyiyorum."}]"""),
+        WordEntity(esWord = "pantalón", trMeaning = "pantolon", partOfSpeech = "isim", pronunciation = "/pantaˈlon/", examples = """[{"es":"El pantalón es negro.","tr":"Pantolon siyah."}]"""),
+        WordEntity(esWord = "falda", trMeaning = "etek", partOfSpeech = "isim", pronunciation = "/ˈfalda/", examples = """[{"es":"La falda es roja.","tr":"Etek kırmızı."}]"""),
+        WordEntity(esWord = "vestido", trMeaning = "elbise", partOfSpeech = "isim", pronunciation = "/besˈtiðo/", examples = """[{"es":"El vestido es elegante.","tr":"Elbise şık."}]"""),
+        WordEntity(esWord = "zapato", trMeaning = "ayakkabı", partOfSpeech = "isim", pronunciation = "/θaˈpato/", examples = """[{"es":"Mis zapatos son nuevos.","tr":"Ayakkabılarım yeni."}]"""),
+        WordEntity(esWord = "calcetín", trMeaning = "çorap", partOfSpeech = "isim", pronunciation = "/kalθeˈtin/", examples = """[{"es":"Llevo calcetines blancos.","tr":"Beyaz çorap giyiyorum."}]"""),
+        WordEntity(esWord = "abrigo", trMeaning = "palto, manto", partOfSpeech = "isim", pronunciation = "/aˈβɾiɣo/", examples = """[{"es":"Hace frío, ponte el abrigo.","tr":"Hava soğuk, paltonu giy."}]"""),
+        WordEntity(esWord = "chaqueta", trMeaning = "ceket", partOfSpeech = "isim", pronunciation = "/tʃaˈketa/", examples = """[{"es":"La chaqueta es de cuero.","tr":"Ceket deri."}]"""),
+        WordEntity(esWord = "sombrero", trMeaning = "şapka", partOfSpeech = "isim", pronunciation = "/somˈbɾeɾo/", examples = """[{"es":"Llevo un sombrero en verano.","tr":"Yazın şapka takıyorum."}]"""),
+        WordEntity(esWord = "guante", trMeaning = "eldiven", partOfSpeech = "isim", pronunciation = "/ˈɡwante/", examples = """[{"es":"Uso guantes en invierno.","tr":"Kışın eldiven kullanıyorum."}]"""),
+        WordEntity(esWord = "gafas", trMeaning = "gözlük", partOfSpeech = "isim", pronunciation = "/ˈɡafas/", examples = """[{"es":"Necesito mis gafas para leer.","tr":"Okumak için gözlüğüme ihtiyacım var."}]"""),
+        WordEntity(esWord = "bolso", trMeaning = "çanta, el çantası", partOfSpeech = "isim", pronunciation = "/ˈbolso/", examples = """[{"es":"El bolso es de cuero.","tr":"Çanta deri."}]"""),
+
+        // Seyahat ve ulaşım
+        WordEntity(esWord = "tren", trMeaning = "tren", partOfSpeech = "isim", pronunciation = "/tɾen/", examples = """[{"es":"El tren llega tarde.","tr":"Tren geç geliyor."}]"""),
+        WordEntity(esWord = "autobús", trMeaning = "otobüs", partOfSpeech = "isim", pronunciation = "/awtoˈβus/", examples = """[{"es":"Tomo el autobús al trabajo.","tr":"İşe otobüsle gidiyorum."}]"""),
+        WordEntity(esWord = "avión", trMeaning = "uçak", partOfSpeech = "isim", pronunciation = "/aˈβjon/", examples = """[{"es":"El avión despega ahora.","tr":"Uçak şimdi kalkıyor."}]"""),
+        WordEntity(esWord = "barco", trMeaning = "gemi, tekne", partOfSpeech = "isim", pronunciation = "/ˈbaɾko/", examples = """[{"es":"El barco cruza el mar.","tr":"Gemi denizi geçiyor."}]"""),
+        WordEntity(esWord = "bicicleta", trMeaning = "bisiklet", partOfSpeech = "isim", pronunciation = "/biθiˈkleta/", examples = """[{"es":"Voy en bicicleta al parque.","tr":"Parka bisikletle gidiyorum."}]"""),
+        WordEntity(esWord = "moto", trMeaning = "motosiklet", partOfSpeech = "isim", pronunciation = "/ˈmoto/", examples = """[{"es":"La moto es rápida.","tr":"Motosiklet hızlı."}]"""),
+        WordEntity(esWord = "taxi", trMeaning = "taksi", partOfSpeech = "isim", pronunciation = "/ˈtaksi/", examples = """[{"es":"Llamo a un taxi.","tr":"Bir taksi çağırıyorum."}]"""),
+        WordEntity(esWord = "metro", trMeaning = "metro", partOfSpeech = "isim", pronunciation = "/ˈmetɾo/", examples = """[{"es":"El metro es muy rápido.","tr":"Metro çok hızlı."}]"""),
+        WordEntity(esWord = "billete", trMeaning = "bilet, banknot", partOfSpeech = "isim", pronunciation = "/biˈʎete/", examples = """[{"es":"Compro un billete de tren.","tr":"Bir tren bileti alıyorum."}]"""),
+        WordEntity(esWord = "maleta", trMeaning = "bavul, valiz", partOfSpeech = "isim", pronunciation = "/maˈleta/", examples = """[{"es":"Mi maleta es muy pesada.","tr":"Bavulum çok ağır."}]"""),
+        WordEntity(esWord = "mapa", trMeaning = "harita", partOfSpeech = "isim", pronunciation = "/ˈmapa/", examples = """[{"es":"Miro el mapa de la ciudad.","tr":"Şehrin haritasına bakıyorum."}]"""),
+        WordEntity(esWord = "viaje", trMeaning = "seyahat, yolculuk", partOfSpeech = "isim", pronunciation = "/ˈbjaxe/", examples = """[{"es":"El viaje es largo.","tr":"Yolculuk uzun."}]"""),
+        WordEntity(esWord = "camino", trMeaning = "yol, patika", partOfSpeech = "isim", pronunciation = "/kaˈmino/", examples = """[{"es":"El camino es estrecho.","tr":"Yol dar."}]"""),
+        WordEntity(esWord = "carretera", trMeaning = "karayolu, anayol", partOfSpeech = "isim", pronunciation = "/kareˈteɾa/", examples = """[{"es":"La carretera está cerrada.","tr":"Yol kapalı."}]"""),
+    )
+}

@@ -2,17 +2,33 @@
 <resources>
     <string name="app_name">İspanyolca Sözlük</string>
 
-    <!-- Navigation -->
-    <string name="nav_search">Ara</string>
+    <!-- Bottom navigation -->
+    <string name="nav_home">Ana Sayfa</string>
+    <string name="nav_dictionary">Sözlük</string>
+    <string name="nav_cards">Kartlar</string>
     <string name="nav_favorites">Favoriler</string>
-    <string name="nav_word_of_day">Günün Kelimesi</string>
     <string name="title_word_detail">Kelime Detayı</string>
 
+    <!-- Ortak -->
+    <string name="lang_pair">İSPANYOLCA → TÜRKÇE</string>
+    <string name="lang_pair_reverse">TÜRKÇE → İSPANYOLCA</string>
+    <string name="lang_toggle">ESP · TR</string>
+    <string name="title_dictionary">Sözlük</string>
+
+    <!-- Home -->
+    <string name="section_word_of_day">GÜNÜN KELIMESI</string>
+    <string name="section_recent">SON ARAMALAR</string>
+    <string name="cta_flashcards_title">Kart çalışması</string>
+    <string name="cta_flashcards_subtitle">%1$d kelime · tekrar et</string>
+    <string name="recent_empty">Henüz arama yapmadın</string>
+    <string name="clear">Temizle</string>
+
     <!-- Search -->
-    <string name="direction_es_tr">ES → TR</string>
-    <string name="direction_tr_es">TR → ES</string>
+    <string name="hint_search">Kelime ara…</string>
     <string name="hint_search_es">İspanyolca kelime ara…</string>
     <string name="hint_search_tr">Türkçe kelime ara…</string>
+    <string name="direction_es_tr">ES → TR</string>
+    <string name="direction_tr_es">TR → ES</string>
     <string name="search_hint_message">Çevirisini görmek için bir kelime yazın</string>
     <string name="no_results">Sonuç bulunamadı</string>
 
@@ -20,11 +36,20 @@
     <string name="label_meaning">Anlamı</string>
     <string name="label_examples">Örnek Cümleler</string>
     <string name="cd_toggle_favorite">Favorilere ekle/çıkar</string>
+    <string name="cd_play_pronunciation">Telaffuzu dinle</string>
+    <string name="cd_back">Geri</string>
 
     <!-- Favorites -->
+    <string name="favorites_title">Favoriler</string>
     <string name="favorites_empty">Henüz favori kelime yok.\nBir kelimeyi favorilere eklemek için detay ekranındaki kalp simgesine dokunun.</string>
 
-    <!-- Word of day -->
-    <string name="btn_see_details">Detayları Gör</string>
-    <string name="btn_new_word">Yeni Kelime</string>
+    <!-- Flashcards -->
+    <string name="flashcards_title">Kart Çalışması</string>
+    <string name="flashcards_tap_hint">Çevirmek için karta dokun</string>
+    <string name="flashcards_know">Biliyorum</string>
+    <string name="flashcards_dont_know">Tekrar et</string>
+    <string name="flashcards_progress">%1$d / %2$d</string>
+    <string name="flashcards_done">Tebrikler! Desteyi tamamladın 🎉</string>
+    <string name="flashcards_restart">Yeniden başla</string>
+    <string name="flashcards_empty">Çalışacak kelime bulunamadı</string>
 </resources>

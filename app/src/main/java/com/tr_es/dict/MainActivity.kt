@@ -2,6 +2,7 @@ package com.tr_es.dict
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.tr_es.dict.databinding.ActivityMainBinding
@@ -22,5 +23,11 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         binding.bottomNavigation.setupWithNavController(navController)
+
+        // Detay ekranında alt menüyü gizle (tam ekran kart görünümü)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            binding.bottomNavigation.isVisible =
+                destination.id != R.id.wordDetailFragment
+        }
     }
 }

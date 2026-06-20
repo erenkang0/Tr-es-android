@@ -1,0 +1,103 @@
+package com.tr_es.dict.data.local.seed
+
+import com.tr_es.dict.data.local.entity.WordEntity
+
+internal object SeedGrammar {
+    val items = listOf<WordEntity>(
+        // Sayılar (mevcut: uno, dos, tres, cuatro, cinco, diez, cien, mil)
+        WordEntity(esWord = "cero", trMeaning = "sıfır (0)", partOfSpeech = "sayı", pronunciation = "/ˈθeɾo/", examples = """[{"es":"La temperatura es cero grados.","tr":"Sıcaklık sıfır derece."}]"""),
+        WordEntity(esWord = "seis", trMeaning = "altı (6)", partOfSpeech = "sayı", pronunciation = "/sejs/", examples = """[{"es":"Tengo seis libros.","tr":"Altı kitabım var."}]"""),
+        WordEntity(esWord = "siete", trMeaning = "yedi (7)", partOfSpeech = "sayı", pronunciation = "/ˈsjete/", examples = """[{"es":"Me levanto a las siete.","tr":"Saat yedide kalkıyorum."}]"""),
+        WordEntity(esWord = "ocho", trMeaning = "sekiz (8)", partOfSpeech = "sayı", pronunciation = "/ˈotʃo/", examples = """[{"es":"Trabajo ocho horas.","tr":"Sekiz saat çalışıyorum."}]"""),
+        WordEntity(esWord = "nueve", trMeaning = "dokuz (9)", partOfSpeech = "sayı", pronunciation = "/ˈnweβe/", examples = """[{"es":"La tienda abre a las nueve.","tr":"Dükkan dokuzda açılıyor."}]"""),
+        WordEntity(esWord = "once", trMeaning = "on bir (11)", partOfSpeech = "sayı", pronunciation = "/ˈonθe/", examples = """[{"es":"Son las once.","tr":"Saat on bir."}]"""),
+        WordEntity(esWord = "doce", trMeaning = "on iki (12)", partOfSpeech = "sayı", pronunciation = "/ˈdoθe/", examples = """[{"es":"El año tiene doce meses.","tr":"Yıl on iki aydır."}]"""),
+        WordEntity(esWord = "trece", trMeaning = "on üç (13)", partOfSpeech = "sayı", pronunciation = "/ˈtɾeθe/", examples = """[{"es":"Tengo trece años.","tr":"On üç yaşındayım."}]"""),
+        WordEntity(esWord = "catorce", trMeaning = "on dört (14)", partOfSpeech = "sayı", pronunciation = "/kaˈtoɾθe/", examples = """[{"es":"Hay catorce personas.","tr":"On dört kişi var."}]"""),
+        WordEntity(esWord = "quince", trMeaning = "on beş (15)", partOfSpeech = "sayı", pronunciation = "/ˈkinθe/", examples = """[{"es":"Espera quince minutos.","tr":"On beş dakika bekle."}]"""),
+        WordEntity(esWord = "dieciséis", trMeaning = "on altı (16)", partOfSpeech = "sayı", pronunciation = "/djeθiˈsejs/", examples = """[{"es":"Tiene dieciséis años.","tr":"On altı yaşında."}]"""),
+        WordEntity(esWord = "diecisiete", trMeaning = "on yedi (17)", partOfSpeech = "sayı", pronunciation = "/djeθiˈsjete/", examples = """[{"es":"Hay diecisiete sillas.","tr":"On yedi sandalye var."}]"""),
+        WordEntity(esWord = "dieciocho", trMeaning = "on sekiz (18)", partOfSpeech = "sayı", pronunciation = "/djeˈθjotʃo/", examples = """[{"es":"A los dieciocho años voto.","tr":"On sekiz yaşında oy veriyorum."}]"""),
+        WordEntity(esWord = "diecinueve", trMeaning = "on dokuz (19)", partOfSpeech = "sayı", pronunciation = "/djeθiˈnweβe/", examples = """[{"es":"Quedan diecinueve días.","tr":"On dokuz gün kaldı."}]"""),
+        WordEntity(esWord = "veinte", trMeaning = "yirmi (20)", partOfSpeech = "sayı", pronunciation = "/ˈbejnte/", examples = """[{"es":"Cuesta veinte euros.","tr":"Yirmi euro tutuyor."}]"""),
+        WordEntity(esWord = "treinta", trMeaning = "otuz (30)", partOfSpeech = "sayı", pronunciation = "/ˈtɾejnta/", examples = """[{"es":"Tiene treinta años.","tr":"Otuz yaşında."}]"""),
+        WordEntity(esWord = "cuarenta", trMeaning = "kırk (40)", partOfSpeech = "sayı", pronunciation = "/kwaˈɾenta/", examples = """[{"es":"Hay cuarenta alumnos.","tr":"Kırk öğrenci var."}]"""),
+        WordEntity(esWord = "cincuenta", trMeaning = "elli (50)", partOfSpeech = "sayı", pronunciation = "/θiŋˈkwenta/", examples = """[{"es":"Cincuenta personas vinieron.","tr":"Elli kişi geldi."}]"""),
+        WordEntity(esWord = "sesenta", trMeaning = "altmış (60)", partOfSpeech = "sayı", pronunciation = "/seˈsenta/", examples = """[{"es":"Mi abuelo tiene sesenta años.","tr":"Dedem altmış yaşında."}]"""),
+        WordEntity(esWord = "setenta", trMeaning = "yetmiş (70)", partOfSpeech = "sayı", pronunciation = "/seˈtenta/", examples = """[{"es":"El libro tiene setenta páginas.","tr":"Kitabın yetmiş sayfası var."}]"""),
+        WordEntity(esWord = "ochenta", trMeaning = "seksen (80)", partOfSpeech = "sayı", pronunciation = "/oˈtʃenta/", examples = """[{"es":"Hay ochenta sillas.","tr":"Seksen sandalye var."}]"""),
+        WordEntity(esWord = "noventa", trMeaning = "doksan (90)", partOfSpeech = "sayı", pronunciation = "/noˈβenta/", examples = """[{"es":"Cuesta noventa euros.","tr":"Doksan euro tutuyor."}]"""),
+
+        // Zamirler
+        WordEntity(esWord = "yo", trMeaning = "ben", partOfSpeech = "zamir", pronunciation = "/ʝo/", examples = """[{"es":"Yo soy turco.","tr":"Ben Türküm."}]"""),
+        WordEntity(esWord = "tú", trMeaning = "sen", partOfSpeech = "zamir", pronunciation = "/tu/", examples = """[{"es":"Tú eres mi amigo.","tr":"Sen benim arkadaşımsın."}]"""),
+        WordEntity(esWord = "él", trMeaning = "o (erkek)", partOfSpeech = "zamir", pronunciation = "/el/", examples = """[{"es":"Él vive en Madrid.","tr":"O Madrid'de yaşıyor."}]"""),
+        WordEntity(esWord = "ella", trMeaning = "o (kadın)", partOfSpeech = "zamir", pronunciation = "/ˈeʎa/", examples = """[{"es":"Ella es profesora.","tr":"O öğretmen."}]"""),
+        WordEntity(esWord = "nosotros", trMeaning = "biz", partOfSpeech = "zamir", pronunciation = "/noˈsotɾos/", examples = """[{"es":"Nosotros somos amigos.","tr":"Biz arkadaşız."}]"""),
+        WordEntity(esWord = "vosotros", trMeaning = "siz", partOfSpeech = "zamir", pronunciation = "/boˈsotɾos/", examples = """[{"es":"Vosotros sois jóvenes.","tr":"Siz gençsiniz."}]"""),
+        WordEntity(esWord = "ellos", trMeaning = "onlar", partOfSpeech = "zamir", pronunciation = "/ˈeʎos/", examples = """[{"es":"Ellos trabajan aquí.","tr":"Onlar burada çalışıyor."}]"""),
+        WordEntity(esWord = "usted", trMeaning = "siz (resmi)", partOfSpeech = "zamir", pronunciation = "/usˈteð/", examples = """[{"es":"¿Cómo está usted?","tr":"Nasılsınız?"}]"""),
+        WordEntity(esWord = "esto", trMeaning = "bu (şey)", partOfSpeech = "zamir", pronunciation = "/ˈesto/", examples = """[{"es":"¿Qué es esto?","tr":"Bu nedir?"}]"""),
+        WordEntity(esWord = "eso", trMeaning = "şu, o (şey)", partOfSpeech = "zamir", pronunciation = "/ˈeso/", examples = """[{"es":"Eso es muy interesante.","tr":"Bu çok ilginç."}]"""),
+
+        // Edatlar (prepozisyonlar)
+        WordEntity(esWord = "en", trMeaning = "-de, -da, içinde", partOfSpeech = "edat", pronunciation = "/en/", examples = """[{"es":"Estoy en casa.","tr":"Evdeyim."}]"""),
+        WordEntity(esWord = "de", trMeaning = "-den, -in (iyelik)", partOfSpeech = "edat", pronunciation = "/de/", examples = """[{"es":"El libro de mi amigo.","tr":"Arkadaşımın kitabı."}]"""),
+        WordEntity(esWord = "a", trMeaning = "-e, -a (yönelme)", partOfSpeech = "edat", pronunciation = "/a/", examples = """[{"es":"Voy a la escuela.","tr":"Okula gidiyorum."}]"""),
+        WordEntity(esWord = "con", trMeaning = "ile, beraber", partOfSpeech = "edat", pronunciation = "/kon/", examples = """[{"es":"Voy con mi hermano.","tr":"Kardeşimle gidiyorum."}]"""),
+        WordEntity(esWord = "sin", trMeaning = "-siz, olmadan", partOfSpeech = "edat", pronunciation = "/sin/", examples = """[{"es":"Café sin azúcar.","tr":"Şekersiz kahve."}]"""),
+        WordEntity(esWord = "por", trMeaning = "için, -den dolayı, boyunca", partOfSpeech = "edat", pronunciation = "/poɾ/", examples = """[{"es":"Gracias por todo.","tr":"Her şey için teşekkürler."}]"""),
+        WordEntity(esWord = "para", trMeaning = "için, -e doğru", partOfSpeech = "edat", pronunciation = "/ˈpaɾa/", examples = """[{"es":"Esto es para ti.","tr":"Bu senin için."}]"""),
+        WordEntity(esWord = "sobre", trMeaning = "üzerinde, hakkında", partOfSpeech = "edat", pronunciation = "/ˈsoβɾe/", examples = """[{"es":"El libro está sobre la mesa.","tr":"Kitap masanın üzerinde."}]"""),
+        WordEntity(esWord = "entre", trMeaning = "arasında", partOfSpeech = "edat", pronunciation = "/ˈentɾe/", examples = """[{"es":"Está entre dos casas.","tr":"İki evin arasında."}]"""),
+        WordEntity(esWord = "hasta", trMeaning = "-e kadar, dahi", partOfSpeech = "edat", pronunciation = "/ˈasta/", examples = """[{"es":"Hasta mañana.","tr":"Yarına kadar."}]"""),
+        WordEntity(esWord = "desde", trMeaning = "-den beri, -den itibaren", partOfSpeech = "edat", pronunciation = "/ˈdezðe/", examples = """[{"es":"Trabajo desde las ocho.","tr":"Sekizden beri çalışıyorum."}]"""),
+        WordEntity(esWord = "hacia", trMeaning = "-e doğru", partOfSpeech = "edat", pronunciation = "/ˈaθja/", examples = """[{"es":"Camino hacia el centro.","tr":"Merkeze doğru yürüyorum."}]"""),
+
+        // Bağlaçlar
+        WordEntity(esWord = "y", trMeaning = "ve", partOfSpeech = "bağlaç", pronunciation = "/i/", examples = """[{"es":"Pan y leche.","tr":"Ekmek ve süt."}]"""),
+        WordEntity(esWord = "o", trMeaning = "veya, ya da", partOfSpeech = "bağlaç", pronunciation = "/o/", examples = """[{"es":"¿Té o café?","tr":"Çay mı kahve mi?"}]"""),
+        WordEntity(esWord = "pero", trMeaning = "ama, fakat", partOfSpeech = "bağlaç", pronunciation = "/ˈpeɾo/", examples = """[{"es":"Quiero ir, pero no puedo.","tr":"Gitmek istiyorum ama yapamam."}]"""),
+        WordEntity(esWord = "porque", trMeaning = "çünkü", partOfSpeech = "bağlaç", pronunciation = "/poɾˈke/", examples = """[{"es":"No voy porque estoy cansado.","tr":"Gitmiyorum çünkü yorgunum."}]"""),
+        WordEntity(esWord = "si", trMeaning = "eğer, şayet", partOfSpeech = "bağlaç", pronunciation = "/si/", examples = """[{"es":"Si llueve, no salgo.","tr":"Yağmur yağarsa çıkmam."}]"""),
+        WordEntity(esWord = "cuando", trMeaning = "-dığında, ne zaman", partOfSpeech = "bağlaç", pronunciation = "/ˈkwando/", examples = """[{"es":"Te llamo cuando llegue.","tr":"Varınca seni ararım."}]"""),
+        WordEntity(esWord = "aunque", trMeaning = "-e rağmen, her ne kadar", partOfSpeech = "bağlaç", pronunciation = "/ˈawŋke/", examples = """[{"es":"Salgo aunque llueva.","tr":"Yağmur yağsa da çıkıyorum."}]"""),
+        WordEntity(esWord = "también", trMeaning = "de, da, ayrıca", partOfSpeech = "zarf", pronunciation = "/tamˈbjen/", examples = """[{"es":"Yo también voy.","tr":"Ben de gidiyorum."}]"""),
+        WordEntity(esWord = "tampoco", trMeaning = "de değil, hiç (olumsuz)", partOfSpeech = "zarf", pronunciation = "/tamˈpoko/", examples = """[{"es":"Yo tampoco lo sé.","tr":"Ben de bilmiyorum."}]"""),
+
+        // Zarflar
+        WordEntity(esWord = "bien", trMeaning = "iyi, güzel (şekilde)", partOfSpeech = "zarf", pronunciation = "/bjen/", examples = """[{"es":"Hablas muy bien.","tr":"Çok iyi konuşuyorsun."}]"""),
+        WordEntity(esWord = "mal", trMeaning = "kötü (şekilde)", partOfSpeech = "zarf", pronunciation = "/mal/", examples = """[{"es":"Me siento mal.","tr":"Kendimi kötü hissediyorum."}]"""),
+        WordEntity(esWord = "muy", trMeaning = "çok, pek", partOfSpeech = "zarf", pronunciation = "/mwi/", examples = """[{"es":"Es muy importante.","tr":"Çok önemli."}]"""),
+        WordEntity(esWord = "más", trMeaning = "daha, daha çok", partOfSpeech = "zarf", pronunciation = "/mas/", examples = """[{"es":"Quiero más café.","tr":"Daha fazla kahve istiyorum."}]"""),
+        WordEntity(esWord = "menos", trMeaning = "daha az", partOfSpeech = "zarf", pronunciation = "/ˈmenos/", examples = """[{"es":"Hoy hace menos frío.","tr":"Bugün hava daha az soğuk."}]"""),
+        WordEntity(esWord = "ahora", trMeaning = "şimdi, şu an", partOfSpeech = "zarf", pronunciation = "/aˈoɾa/", examples = """[{"es":"Ahora estoy ocupado.","tr":"Şimdi meşgulüm."}]"""),
+        WordEntity(esWord = "después", trMeaning = "sonra, daha sonra", partOfSpeech = "zarf", pronunciation = "/desˈpwes/", examples = """[{"es":"Hablamos después.","tr":"Sonra konuşuruz."}]"""),
+        WordEntity(esWord = "antes", trMeaning = "önce, daha önce", partOfSpeech = "zarf", pronunciation = "/ˈantes/", examples = """[{"es":"Llego antes de las ocho.","tr":"Sekizden önce varıyorum."}]"""),
+        WordEntity(esWord = "temprano", trMeaning = "erken", partOfSpeech = "zarf", pronunciation = "/temˈpɾano/", examples = """[{"es":"Me levanto temprano.","tr":"Erken kalkıyorum."}]"""),
+        WordEntity(esWord = "tarde", trMeaning = "geç", partOfSpeech = "zarf", pronunciation = "/ˈtaɾðe/", examples = """[{"es":"Llego tarde a casa.","tr":"Eve geç geliyorum."}]"""),
+        WordEntity(esWord = "cerca", trMeaning = "yakın, yakında", partOfSpeech = "zarf", pronunciation = "/ˈθeɾka/", examples = """[{"es":"La tienda está cerca.","tr":"Dükkan yakında."}]"""),
+        WordEntity(esWord = "lejos", trMeaning = "uzak, uzakta", partOfSpeech = "zarf", pronunciation = "/ˈlexos/", examples = """[{"es":"Mi casa está lejos.","tr":"Evim uzakta."}]"""),
+        WordEntity(esWord = "deprisa", trMeaning = "çabuk, hızlıca", partOfSpeech = "zarf", pronunciation = "/deˈpɾisa/", examples = """[{"es":"Come deprisa, es tarde.","tr":"Çabuk ye, geç oldu."}]"""),
+        WordEntity(esWord = "despacio", trMeaning = "yavaşça, yavaş", partOfSpeech = "zarf", pronunciation = "/desˈpaθjo/", examples = """[{"es":"Habla despacio, por favor.","tr":"Lütfen yavaş konuş."}]"""),
+        WordEntity(esWord = "juntos", trMeaning = "birlikte, beraber", partOfSpeech = "zarf", pronunciation = "/ˈxuntos/", examples = """[{"es":"Estudiamos juntos.","tr":"Birlikte ders çalışıyoruz."}]"""),
+        WordEntity(esWord = "solo", trMeaning = "yalnız, sadece", partOfSpeech = "zarf", pronunciation = "/ˈsolo/", examples = """[{"es":"Vivo solo.","tr":"Yalnız yaşıyorum."}]"""),
+        WordEntity(esWord = "todavía", trMeaning = "hâlâ, henüz", partOfSpeech = "zarf", pronunciation = "/toðaˈβia/", examples = """[{"es":"Todavía estoy aquí.","tr":"Hâlâ buradayım."}]"""),
+        WordEntity(esWord = "ya", trMeaning = "artık, zaten, çoktan", partOfSpeech = "zarf", pronunciation = "/ʝa/", examples = """[{"es":"Ya he comido.","tr":"Çoktan yemek yedim."}]"""),
+
+        // Selamlama ve ifadeler
+        WordEntity(esWord = "buenas tardes", trMeaning = "iyi günler, tünaydın", partOfSpeech = "deyim", examples = """[{"es":"Buenas tardes, señora.","tr":"İyi günler, hanımefendi."}]"""),
+        WordEntity(esWord = "hasta luego", trMeaning = "görüşürüz, sonra görüşürüz", partOfSpeech = "deyim", examples = """[{"es":"Me voy, hasta luego.","tr":"Gidiyorum, görüşürüz."}]"""),
+        WordEntity(esWord = "hasta mañana", trMeaning = "yarın görüşürüz", partOfSpeech = "deyim", examples = """[{"es":"Hasta mañana, amigo.","tr":"Yarın görüşürüz, dostum."}]"""),
+        WordEntity(esWord = "lo siento", trMeaning = "üzgünüm, özür dilerim", partOfSpeech = "deyim", examples = """[{"es":"Lo siento mucho.","tr":"Çok üzgünüm."}]"""),
+        WordEntity(esWord = "bienvenido", trMeaning = "hoş geldin", partOfSpeech = "ünlem", pronunciation = "/bjembeˈniðo/", examples = """[{"es":"Bienvenido a mi casa.","tr":"Evime hoş geldin."}]"""),
+        WordEntity(esWord = "felicidades", trMeaning = "tebrikler", partOfSpeech = "ünlem", pronunciation = "/feliθiˈðaðes/", examples = """[{"es":"Felicidades por tu boda.","tr":"Düğünün için tebrikler."}]"""),
+        WordEntity(esWord = "salud", trMeaning = "şerefe, çok yaşa", partOfSpeech = "ünlem", pronunciation = "/saˈluð/", examples = """[{"es":"Salud, amigos.","tr":"Şerefe, dostlar."}]"""),
+        WordEntity(esWord = "cómo estás", trMeaning = "nasılsın", partOfSpeech = "deyim", examples = """[{"es":"Hola, ¿cómo estás?","tr":"Merhaba, nasılsın?"}]"""),
+        WordEntity(esWord = "mucho gusto", trMeaning = "memnun oldum, tanıştığıma sevindim", partOfSpeech = "deyim", examples = """[{"es":"Mucho gusto en conocerte.","tr":"Seninle tanıştığıma memnun oldum."}]"""),
+        WordEntity(esWord = "buen provecho", trMeaning = "afiyet olsun", partOfSpeech = "deyim", examples = """[{"es":"Buen provecho a todos.","tr":"Herkese afiyet olsun."}]"""),
+        WordEntity(esWord = "buena suerte", trMeaning = "iyi şanslar, bol şans", partOfSpeech = "deyim", examples = """[{"es":"Buena suerte en tu examen.","tr":"Sınavında bol şans."}]"""),
+        WordEntity(esWord = "ay", trMeaning = "ah, of (acı ünlemi)", partOfSpeech = "ünlem", pronunciation = "/aj/", examples = """[{"es":"Ay, me duele mucho.","tr":"Ah, çok acıyor."}]"""),
+        WordEntity(esWord = "ojalá", trMeaning = "keşke, inşallah", partOfSpeech = "ünlem", pronunciation = "/oxaˈla/", examples = """[{"es":"Ojalá haga sol mañana.","tr":"Keşke yarın güneş açsa."}]"""),
+    )
+}

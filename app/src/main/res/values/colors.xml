@@ -1,42 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- İspanya bayrağı esinli birincil palet (kırmızı-altın) Material 3 uyumlu -->
-    <color name="md_primary">#B3261E</color>
-    <color name="md_on_primary">#FFFFFF</color>
-    <color name="md_primary_container">#FFDAD5</color>
-    <color name="md_on_primary_container">#410001</color>
-
-    <color name="md_secondary">#9A6700</color>
-    <color name="md_on_secondary">#FFFFFF</color>
-    <color name="md_secondary_container">#FFDEA8</color>
-    <color name="md_on_secondary_container">#301F00</color>
-
-    <color name="md_surface">#FFFBFF</color>
-    <color name="md_on_surface">#201A19</color>
-    <color name="md_surface_variant">#F5DDDA</color>
-    <color name="md_on_surface_variant">#534341</color>
-
-    <color name="md_background">#FFFBFF</color>
-    <color name="md_on_background">#201A19</color>
-    <color name="md_outline">#857371</color>
-
-    <!-- Karanlık tema -->
-    <color name="md_primary_dark">#FFB4AB</color>
-    <color name="md_on_primary_dark">#690003</color>
-    <color name="md_primary_container_dark">#930006</color>
-    <color name="md_on_primary_container_dark">#FFDAD5</color>
-
-    <color name="md_secondary_dark">#FFBA4B</color>
-    <color name="md_on_secondary_dark">#503600</color>
-    <color name="md_secondary_container_dark">#744E00</color>
-    <color name="md_on_secondary_container_dark">#FFDEA8</color>
-
-    <color name="md_surface_dark">#201A19</color>
-    <color name="md_on_surface_dark">#EDE0DE</color>
-    <color name="md_surface_variant_dark">#534341</color>
-    <color name="md_on_surface_variant_dark">#D8C2BF</color>
-
-    <color name="md_background_dark">#201A19</color>
-    <color name="md_on_background_dark">#EDE0DE</color>
-    <color name="md_outline_dark">#A08C8A</color>
+    <color name="sand">#FFF4F1EA</color>
+    <color name="sand_dim">#FFECE7DD</color>
+    <color name="card">#FFFFFFFF</color>
+    <color name="card_alt">#FFFAF7F1</color>
+    <color name="ink">#FF1C1A17</color>
+    <color name="ink_soft">#FF3A362F</color>
+    <color name="ink_muted">#FF8C8478</color>
+    <color name="terracotta">#FFC24B33</color>
+    <color name="terracotta_soft">#FFF6DBCF</color>
+    <color name="chip">#FFE9E4DA</color>
+    <color name="hairline">#FFE5DFD4</color>
+    <color name="white70">#B3FFFFFF</color>
 </resources>

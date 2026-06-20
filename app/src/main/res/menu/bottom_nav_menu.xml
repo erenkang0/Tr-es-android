@@ -2,18 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/nav_home" />
+
+    <item
         android:id="@+id/searchFragment"
-        android:icon="@drawable/ic_search"
-        android:title="@string/nav_search" />
+        android:icon="@drawable/ic_book"
+        android:title="@string/nav_dictionary" />
+
+    <item
+        android:id="@+id/flashcardsFragment"
+        android:icon="@drawable/ic_cards"
+        android:title="@string/nav_cards" />
 
     <item
         android:id="@+id/favoritesFragment"
-        android:icon="@drawable/ic_favorite_outline"
+        android:icon="@drawable/ic_bookmark"
         android:title="@string/nav_favorites" />
-
-    <item
-        android:id="@+id/wordOfDayFragment"
-        android:icon="@drawable/ic_today"
-        android:title="@string/nav_word_of_day" />
 
 </menu>

@@ -26,4 +26,11 @@ interface FavoriteDao {
         ORDER BY favorites.added_at DESC
     """)
     fun getFavoriteWords(): Flow<List<WordEntity>>
+
+    @Query("""
+        SELECT words.* FROM words
+        INNER JOIN favorites ON words.id = favorites.word_id
+        ORDER BY favorites.added_at DESC
+    """)
+    suspend fun getFavoriteWordsOnce(): List<WordEntity>
 }

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text.Display" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Word" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">46sp</item>
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Text.Word.Medium">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Text.Pronunciation" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/ink_muted</item>
+    </style>
+
+    <style name="Text.SectionLabel" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/ink_muted</item>
+    </style>
+
+    <style name="Text.Meaning" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+
+    <style name="Text.Meaning.Small">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/ink_muted</item>
+    </style>
+
+    <style name="Text.Example" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ink_muted</item>
+    </style>
+
+    <style name="Text.Chip" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/ink_muted</item>
+    </style>
+
+    <style name="Text.CtaTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/card</item>
+    </style>
+
+    <style name="Text.CtaSub" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/white70</item>
+    </style>
+
+</resources>

@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.tr_es.dict.data.local.DatabaseSeeder
 import com.tr_es.dict.data.local.DictionaryDatabase
 import com.tr_es.dict.data.local.dao.FavoriteDao
+import com.tr_es.dict.data.local.dao.RecentSearchDao
 import com.tr_es.dict.data.local.dao.WordDao
 import dagger.Module
 import dagger.Provides
@@ -27,7 +28,9 @@ object AppModule {
             context,
             DictionaryDatabase::class.java,
             "tr_es_dict.db"
-        ).build()
+        )
+            .fallbackToDestructiveMigration()
+            .build()
 
         CoroutineScope(Dispatchers.IO).launch {
             if (db.wordDao().getCount() == 0) {
@@ -43,4 +46,7 @@ object AppModule {
 
     @Provides
     fun provideFavoriteDao(db: DictionaryDatabase): FavoriteDao = db.favoriteDao()
+
+    @Provides
+    fun provideRecentSearchDao(db: DictionaryDatabase): RecentSearchDao = db.recentSearchDao()
 }

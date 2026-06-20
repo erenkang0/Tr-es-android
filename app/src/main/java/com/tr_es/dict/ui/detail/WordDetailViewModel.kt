@@ -8,7 +8,6 @@ import com.google.gson.reflect.TypeToken
 import com.tr_es.dict.data.local.entity.WordEntity
 import com.tr_es.dict.data.repository.DictionaryRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -16,12 +15,13 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-data class Example(val es: String, val tr: String)
+/** A single example sentence pair parsed from the word's examples JSON. */
+data class Ex(val es: String = "", val tr: String = "")
 
 data class WordDetailUiState(
     val word: WordEntity? = null,
     val isFavorite: Boolean = false,
-    val examples: List<Example> = emptyList()
+    val examples: List<Ex> = emptyList()
 )
 
 @HiltViewModel
@@ -30,15 +30,25 @@ class WordDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle
 ) : ViewModel() {
 
-    private val wordId: Long = savedStateHandle["wordId"] ?: 0L
+    private val wordId: Long = savedStateHandle.get<Long>("wordId") ?: 0L
     private val gson = Gson()
+
+    init {
+        // Record this word into the recent-searches history.
+        viewModelScope.launch {
+            repository.recordSearch(wordId)
+        }
+    }
 
     val uiState: StateFlow<WordDetailUiState> = combine(
         repository.observeWordById(wordId),
         repository.isFavorite(wordId)
     ) { word, isFavorite ->
-        val examples = parseExamples(word?.examples)
-        WordDetailUiState(word = word, isFavorite = isFavorite, examples = examples)
+        WordDetailUiState(
+            word = word,
+            isFavorite = isFavorite,
+            examples = parseExamples(word?.examples)
+        )
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000),
@@ -51,11 +61,11 @@ class WordDetailViewModel @Inject constructor(
         }
     }
 
-    private fun parseExamples(json: String?): List<Example> {
+    private fun parseExamples(json: String?): List<Ex> {
         if (json.isNullOrBlank()) return emptyList()
         return try {
-            val type = object : TypeToken<List<Example>>() {}.type
-            gson.fromJson(json, type)
+            val type = object : TypeToken<List<Ex>>() {}.type
+            gson.fromJson<List<Ex>>(json, type) ?: emptyList()
         } catch (e: Exception) {
             emptyList()
         }

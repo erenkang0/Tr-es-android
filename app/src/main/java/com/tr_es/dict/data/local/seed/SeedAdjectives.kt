@@ -1,0 +1,60 @@
+package com.tr_es.dict.data.local.seed
+
+import com.tr_es.dict.data.local.entity.WordEntity
+
+internal object SeedAdjectives {
+    val items = listOf<WordEntity>(
+        // Sıfatlar
+        WordEntity(esWord = "largo", trMeaning = "uzun", partOfSpeech = "sıfat", pronunciation = "/ˈlaɾɣo/", examples = """[{"es":"El río es muy largo.","tr":"Nehir çok uzun."}]"""),
+        WordEntity(esWord = "corto", trMeaning = "kısa", partOfSpeech = "sıfat", pronunciation = "/ˈkoɾto/", examples = """[{"es":"El pelo corto es práctico.","tr":"Kısa saç pratik."}]"""),
+        WordEntity(esWord = "ancho", trMeaning = "geniş, enli", partOfSpeech = "sıfat", pronunciation = "/ˈantʃo/", examples = """[{"es":"La calle es ancha.","tr":"Cadde geniş."}]"""),
+        WordEntity(esWord = "estrecho", trMeaning = "dar", partOfSpeech = "sıfat", pronunciation = "/esˈtɾetʃo/", examples = """[{"es":"El camino es estrecho.","tr":"Yol dar."}]"""),
+        WordEntity(esWord = "fuerte", trMeaning = "güçlü, kuvvetli", partOfSpeech = "sıfat", pronunciation = "/ˈfweɾte/", examples = """[{"es":"Es un hombre fuerte.","tr":"Güçlü bir adam."}]"""),
+        WordEntity(esWord = "débil", trMeaning = "zayıf, güçsüz", partOfSpeech = "sıfat", pronunciation = "/ˈdeβil/", examples = """[{"es":"Me siento débil.","tr":"Kendimi güçsüz hissediyorum."}]"""),
+        WordEntity(esWord = "gordo", trMeaning = "şişman, kalın", partOfSpeech = "sıfat", pronunciation = "/ˈɡoɾðo/", examples = """[{"es":"El gato está gordo.","tr":"Kedi şişman."}]"""),
+        WordEntity(esWord = "delgado", trMeaning = "zayıf, ince", partOfSpeech = "sıfat", pronunciation = "/delˈɣaðo/", examples = """[{"es":"Ella es muy delgada.","tr":"O çok zayıf."}]"""),
+        WordEntity(esWord = "joven", trMeaning = "genç", partOfSpeech = "sıfat", pronunciation = "/ˈxoβen/", examples = """[{"es":"Es una persona joven.","tr":"Genç bir kişi."}]"""),
+        WordEntity(esWord = "rico", trMeaning = "zengin, lezzetli", partOfSpeech = "sıfat", pronunciation = "/ˈriko/", examples = """[{"es":"La comida está muy rica.","tr":"Yemek çok lezzetli."}]"""),
+        WordEntity(esWord = "pobre", trMeaning = "fakir, zavallı", partOfSpeech = "sıfat", pronunciation = "/ˈpoβɾe/", examples = """[{"es":"Ayudamos a la gente pobre.","tr":"Fakir insanlara yardım ediyoruz."}]"""),
+        WordEntity(esWord = "limpio", trMeaning = "temiz", partOfSpeech = "sıfat", pronunciation = "/ˈlimpjo/", examples = """[{"es":"La habitación está limpia.","tr":"Oda temiz."}]"""),
+        WordEntity(esWord = "sucio", trMeaning = "kirli, pis", partOfSpeech = "sıfat", pronunciation = "/ˈsuθjo/", examples = """[{"es":"El suelo está sucio.","tr":"Yer kirli."}]"""),
+        WordEntity(esWord = "fácil", trMeaning = "kolay", partOfSpeech = "sıfat", pronunciation = "/ˈfaθil/", examples = """[{"es":"El examen es fácil.","tr":"Sınav kolay."}]"""),
+        WordEntity(esWord = "difícil", trMeaning = "zor, güç", partOfSpeech = "sıfat", pronunciation = "/diˈfiθil/", examples = """[{"es":"La pregunta es difícil.","tr":"Soru zor."}]"""),
+        WordEntity(esWord = "importante", trMeaning = "önemli", partOfSpeech = "sıfat", pronunciation = "/impoɾˈtante/", examples = """[{"es":"Es una reunión importante.","tr":"Önemli bir toplantı."}]"""),
+        WordEntity(esWord = "interesante", trMeaning = "ilginç, ilgi çekici", partOfSpeech = "sıfat", pronunciation = "/inteɾeˈsante/", examples = """[{"es":"El libro es interesante.","tr":"Kitap ilginç."}]"""),
+        WordEntity(esWord = "aburrido", trMeaning = "sıkıcı, sıkılmış", partOfSpeech = "sıfat", pronunciation = "/aβuˈriðo/", examples = """[{"es":"La película es aburrida.","tr":"Film sıkıcı."}]"""),
+        WordEntity(esWord = "peligroso", trMeaning = "tehlikeli", partOfSpeech = "sıfat", pronunciation = "/peliˈɣɾoso/", examples = """[{"es":"Es un trabajo peligroso.","tr":"Tehlikeli bir iş."}]"""),
+        WordEntity(esWord = "seguro", trMeaning = "güvenli, emin", partOfSpeech = "sıfat", pronunciation = "/seˈɣuɾo/", examples = """[{"es":"Este lugar es seguro.","tr":"Bu yer güvenli."}]"""),
+        WordEntity(esWord = "amable", trMeaning = "nazik, kibar", partOfSpeech = "sıfat", pronunciation = "/aˈmaβle/", examples = """[{"es":"Eres muy amable.","tr":"Çok naziksin."}]"""),
+        WordEntity(esWord = "fuerte", trMeaning = "şiddetli (ses/yağmur)", partOfSpeech = "zarf", pronunciation = "/ˈfweɾte/", examples = """[{"es":"No hables tan fuerte.","tr":"Bu kadar yüksek sesle konuşma."}]"""),
+        WordEntity(esWord = "delicioso", trMeaning = "lezzetli, nefis", partOfSpeech = "sıfat", pronunciation = "/deliˈθjoso/", examples = """[{"es":"La cena está deliciosa.","tr":"Akşam yemeği nefis."}]"""),
+        WordEntity(esWord = "famoso", trMeaning = "ünlü, meşhur", partOfSpeech = "sıfat", pronunciation = "/faˈmoso/", examples = """[{"es":"Es un actor famoso.","tr":"Ünlü bir aktör."}]"""),
+        WordEntity(esWord = "rico en sabor", trMeaning = "lezzet bakımından zengin", partOfSpeech = "deyim", examples = """[{"es":"Este plato es rico en sabor.","tr":"Bu yemek lezzet bakımından zengin."}]"""),
+        WordEntity(esWord = "lleno", trMeaning = "dolu", partOfSpeech = "sıfat", pronunciation = "/ˈʎeno/", examples = """[{"es":"El vaso está lleno.","tr":"Bardak dolu."}]"""),
+        WordEntity(esWord = "vacío", trMeaning = "boş", partOfSpeech = "sıfat", pronunciation = "/baˈθio/", examples = """[{"es":"La botella está vacía.","tr":"Şişe boş."}]"""),
+        WordEntity(esWord = "claro", trMeaning = "açık, net, aydınlık", partOfSpeech = "sıfat", pronunciation = "/ˈklaɾo/", examples = """[{"es":"El cielo está claro.","tr":"Gökyüzü açık."}]"""),
+        WordEntity(esWord = "oscuro", trMeaning = "karanlık, koyu", partOfSpeech = "sıfat", pronunciation = "/osˈkuɾo/", examples = """[{"es":"La habitación está oscura.","tr":"Oda karanlık."}]"""),
+        WordEntity(esWord = "duro", trMeaning = "sert, katı, zor", partOfSpeech = "sıfat", pronunciation = "/ˈduɾo/", examples = """[{"es":"El pan está duro.","tr":"Ekmek bayat."}]"""),
+        WordEntity(esWord = "blando", trMeaning = "yumuşak", partOfSpeech = "sıfat", pronunciation = "/ˈblando/", examples = """[{"es":"La almohada es blanda.","tr":"Yastık yumuşak."}]"""),
+        WordEntity(esWord = "dulce", trMeaning = "tatlı", partOfSpeech = "sıfat", pronunciation = "/ˈdulθe/", examples = """[{"es":"El postre es dulce.","tr":"Tatlı şekerli."}]"""),
+        WordEntity(esWord = "amargo", trMeaning = "acı (tat)", partOfSpeech = "sıfat", pronunciation = "/aˈmaɾɣo/", examples = """[{"es":"El café está amargo.","tr":"Kahve acı."}]"""),
+        WordEntity(esWord = "salado", trMeaning = "tuzlu", partOfSpeech = "sıfat", pronunciation = "/saˈlaðo/", examples = """[{"es":"La sopa está muy salada.","tr":"Çorba çok tuzlu."}]"""),
+        WordEntity(esWord = "caro", trMeaning = "pahalı", partOfSpeech = "sıfat", pronunciation = "/ˈkaɾo/", examples = """[{"es":"El coche es muy caro.","tr":"Araba çok pahalı."}]"""),
+        WordEntity(esWord = "barato", trMeaning = "ucuz", partOfSpeech = "sıfat", pronunciation = "/baˈɾato/", examples = """[{"es":"Esta camisa es barata.","tr":"Bu gömlek ucuz."}]"""),
+        WordEntity(esWord = "pesado", trMeaning = "ağır", partOfSpeech = "sıfat", pronunciation = "/peˈsaðo/", examples = """[{"es":"La maleta es pesada.","tr":"Bavul ağır."}]"""),
+        WordEntity(esWord = "ligero", trMeaning = "hafif", partOfSpeech = "sıfat", pronunciation = "/liˈxeɾo/", examples = """[{"es":"La mochila es ligera.","tr":"Sırt çantası hafif."}]"""),
+        WordEntity(esWord = "tranquilo", trMeaning = "sakin, huzurlu", partOfSpeech = "sıfat", pronunciation = "/tɾaŋˈkilo/", examples = """[{"es":"El pueblo es tranquilo.","tr":"Köy sakin."}]"""),
+        WordEntity(esWord = "ocupado", trMeaning = "meşgul, dolu", partOfSpeech = "sıfat", pronunciation = "/okuˈpaðo/", examples = """[{"es":"Estoy muy ocupado hoy.","tr":"Bugün çok meşgulüm."}]"""),
+        WordEntity(esWord = "libre", trMeaning = "özgür, boş, serbest", partOfSpeech = "sıfat", pronunciation = "/ˈliβɾe/", examples = """[{"es":"¿Estás libre mañana?","tr":"Yarın boş musun?"}]"""),
+        WordEntity(esWord = "posible", trMeaning = "mümkün, olası", partOfSpeech = "sıfat", pronunciation = "/poˈsiβle/", examples = """[{"es":"Todo es posible.","tr":"Her şey mümkün."}]"""),
+        WordEntity(esWord = "necesario", trMeaning = "gerekli", partOfSpeech = "sıfat", pronunciation = "/neseˈsaɾjo/", examples = """[{"es":"No es necesario.","tr":"Gerekli değil."}]"""),
+
+        // Renkler
+        WordEntity(esWord = "naranja", trMeaning = "turuncu", partOfSpeech = "sıfat", pronunciation = "/naˈɾaŋxa/", examples = """[{"es":"La pelota es naranja.","tr":"Top turuncu."}]"""),
+        WordEntity(esWord = "rosa", trMeaning = "pembe", partOfSpeech = "sıfat", pronunciation = "/ˈrosa/", examples = """[{"es":"El vestido es rosa.","tr":"Elbise pembe."}]"""),
+        WordEntity(esWord = "morado", trMeaning = "mor", partOfSpeech = "sıfat", pronunciation = "/moˈɾaðo/", examples = """[{"es":"La flor es morada.","tr":"Çiçek mor."}]"""),
+        WordEntity(esWord = "gris", trMeaning = "gri", partOfSpeech = "sıfat", pronunciation = "/ɡɾis/", examples = """[{"es":"El cielo está gris.","tr":"Gökyüzü gri."}]"""),
+        WordEntity(esWord = "marrón", trMeaning = "kahverengi", partOfSpeech = "sıfat", pronunciation = "/maˈron/", examples = """[{"es":"Sus ojos son marrones.","tr":"Gözleri kahverengi."}]"""),
+        WordEntity(esWord = "dorado", trMeaning = "altın rengi, yaldızlı", partOfSpeech = "sıfat", pronunciation = "/doˈɾaðo/", examples = """[{"es":"El anillo es dorado.","tr":"Yüzük altın rengi."}]"""),
+    )
+}

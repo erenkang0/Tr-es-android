@@ -1,10 +1,19 @@
 package com.tr_es.dict.data.local
 
 import com.tr_es.dict.data.local.entity.WordEntity
+import com.tr_es.dict.data.local.seed.SeedAdjectives
+import com.tr_es.dict.data.local.seed.SeedGrammar
+import com.tr_es.dict.data.local.seed.SeedNounsFood
+import com.tr_es.dict.data.local.seed.SeedNounsHome
+import com.tr_es.dict.data.local.seed.SeedNounsNature
+import com.tr_es.dict.data.local.seed.SeedNounsPeople
+import com.tr_es.dict.data.local.seed.SeedNounsTime
+import com.tr_es.dict.data.local.seed.SeedVerbs
 
 object DatabaseSeeder {
 
-    val words = listOf(
+    // Çekirdek kelime listesi (uygulamayla birlikte gelen temel kelimeler).
+    private val coreWords = listOf(
         // Temel nesneler
         WordEntity(esWord = "casa", trMeaning = "ev, konut", partOfSpeech = "isim", examples = """[{"es":"Mi casa es grande.","tr":"Benim evim büyük."}]"""),
         WordEntity(esWord = "perro", trMeaning = "köpek", partOfSpeech = "isim", examples = """[{"es":"El perro es fiel.","tr":"Köpek sadıktır."}]"""),
@@ -154,4 +163,16 @@ object DatabaseSeeder {
         WordEntity(esWord = "cien", trMeaning = "yüz (100)", partOfSpeech = "sayı", examples = """[{"es":"Cuesta cien euros.","tr":"Yüz euroya mal oluyor."}]"""),
         WordEntity(esWord = "mil", trMeaning = "bin (1000)", partOfSpeech = "sayı", examples = """[{"es":"Hay mil razones.","tr":"Bin neden var."}]"""),
     )
+
+    // Tüm tohum (seed) listelerinin birleşimi. Veritabanı ilk kez doldurulurken kullanılır.
+    val words: List<WordEntity> =
+        coreWords +
+            SeedVerbs.items +
+            SeedNounsFood.items +
+            SeedNounsPeople.items +
+            SeedNounsNature.items +
+            SeedNounsHome.items +
+            SeedNounsTime.items +
+            SeedAdjectives.items +
+            SeedGrammar.items
 }

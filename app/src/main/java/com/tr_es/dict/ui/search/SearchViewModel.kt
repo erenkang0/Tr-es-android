@@ -13,19 +13,12 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
-import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import javax.inject.Inject
-
-data class SearchUiState(
-    val results: List<WordEntity> = emptyList(),
-    val query: String = "",
-    val direction: SearchDirection = SearchDirection.ES_TO_TR,
-    val isIdle: Boolean = true
-)
 
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 @HiltViewModel
@@ -33,36 +26,36 @@ class SearchViewModel @Inject constructor(
     private val repository: DictionaryRepository
 ) : ViewModel() {
 
+    data class SearchUiState(
+        val results: List<WordEntity> = emptyList(),
+        val direction: SearchDirection = SearchDirection.ES_TO_TR,
+        val isIdle: Boolean = true
+    )
+
     private val queryFlow = MutableStateFlow("")
     private val directionFlow = MutableStateFlow(SearchDirection.ES_TO_TR)
 
-    val uiState: StateFlow<SearchUiState> = combine(
-        queryFlow,
-        directionFlow
-    ) { query, direction -> query to direction }
-        .debounce(300L)
-        .flatMapLatest { (query, direction) ->
-            if (query.length < 2) {
-                flowOf(SearchUiState(query = query, direction = direction, isIdle = true))
+    val uiState: StateFlow<SearchUiState> = combine(queryFlow, directionFlow) { q, d ->
+        q to d
+    }
+        .debounce(300)
+        .flatMapLatest { (q, d) ->
+            if (q.trim().length < 2) {
+                flowOf(SearchUiState(direction = d, isIdle = true))
             } else {
-                repository.search(query, direction).map { results ->
-                    SearchUiState(
-                        results = results,
-                        query = query,
-                        direction = direction,
-                        isIdle = false
-                    )
+                repository.search(q, d).map { results ->
+                    SearchUiState(results = results, direction = d, isIdle = false)
                 }
             }
         }
         .stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.WhileSubscribed(5000),
-            initialValue = SearchUiState()
+            viewModelScope,
+            SharingStarted.WhileSubscribed(5000),
+            SearchUiState()
         )
 
-    fun onQueryChanged(query: String) {
-        queryFlow.value = query
+    fun onQueryChanged(q: String) {
+        queryFlow.value = q
     }
 
     fun toggleDirection() {
@@ -71,6 +64,11 @@ class SearchViewModel @Inject constructor(
         } else {
             SearchDirection.ES_TO_TR
         }
-        // directionFlow değişimi combine'ı yeniden tetikler; ayrıca bir şey yapmaya gerek yok.
+    }
+
+    fun recordSearch(id: Long) {
+        viewModelScope.launch {
+            repository.recordSearch(id)
+        }
     }
 }

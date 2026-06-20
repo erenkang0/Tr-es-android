@@ -40,6 +40,12 @@ interface WordDao {
     @Query("SELECT * FROM words ORDER BY RANDOM() LIMIT 1")
     suspend fun getRandomWord(): WordEntity?
 
+    @Query("SELECT * FROM words ORDER BY RANDOM() LIMIT :limit")
+    suspend fun getRandomWords(limit: Int): List<WordEntity>
+
+    @Query("SELECT * FROM words ORDER BY id LIMIT 1 OFFSET :offset")
+    suspend fun getWordByOffset(offset: Int): WordEntity?
+
     @Query("SELECT * FROM words WHERE id = :id")
     fun observeWordById(id: Long): Flow<WordEntity?>
 }

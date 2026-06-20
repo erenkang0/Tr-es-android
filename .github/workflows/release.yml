@@ -4,10 +4,16 @@ on:
   push:
     tags:
       - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Sürüm numarası (örn: v1.0.0)'
+        required: true
+        default: 'v1.0.0'
 
 jobs:
   release:
-    name: Create GitHub Release
+    name: Build & Create Release
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -15,6 +21,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Determine version
+        id: ver
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
+          else
+            echo "name=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          fi
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -28,30 +43,44 @@ jobs:
       - name: Grant execute permission to gradlew
         run: chmod +x gradlew
 
-      - name: Build release APK
-        run: ./gradlew assembleRelease
-        env:
-          ANDROID_HOME: ${{ env.ANDROID_HOME }}
+      - name: Build debug APK
+        run: ./gradlew assembleDebug
+
+      - name: Rename APK
+        run: |
+          VERSION=${{ steps.ver.outputs.name }}
+          mv app/build/outputs/apk/debug/app-debug.apk \
+             app/build/outputs/apk/debug/tr-es-sozluk-${VERSION}.apk
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "İspanyolca Sözlük ${{ github.ref_name }}"
+          tag_name: ${{ steps.ver.outputs.name }}
+          name: "İspanyolca Sözlük ${{ steps.ver.outputs.name }}"
           body: |
-            ## İspanyolca–Türkçe Sözlük ${{ github.ref_name }}
+            ## İspanyolca–Türkçe Sözlük ${{ steps.ver.outputs.name }}
 
-            Türkçe konuşan kullanıcılar için tamamen çevrimdışı İspanyolca sözlük.
+            Türkçe konuşan kullanıcılar için tamamen **çevrimdışı** İspanyolca sözlük uygulaması.
 
             ### Özellikler
-            - Çift yönlü kelime arama (ES ↔ TR)
-            - Favoriler listesi
-            - Günün Kelimesi
-            - Tamamen offline — internet gerekmez
-            - Material Design 3
+            - 🔍 Çift yönlü kelime arama (ES ↔ TR) — FTS4 tam metin, 300ms debounce
+            - ⭐ Favoriler listesi (kaydırarak silme)
+            - 📅 Günün Kelimesi (günlük otomatik yenileme)
+            - 💬 Örnek cümleler her kelime için
+            - 🌙 Açık/Koyu tema · İspanya esinli Material Design 3
+            - 📴 Tamamen offline — internet bağlantısı gerekmez
+
+            ### Gereksinimler
+            Android 8.0+ (API 26)
 
             ### Kurulum
-            APK dosyasını indirip Android cihazınıza yükleyin.
-            (Ayarlar → Güvenlik → Bilinmeyen kaynaklara izin ver)
-          files: app/build/outputs/apk/release/*.apk
+            APK dosyasını indirip yükleyin. Yükleme için
+            _Ayarlar → Güvenlik → Bilinmeyen kaynaklardan yüklemeye izin ver_ seçeneğini etkinleştirin.
+
+            ### Sözlük Verisi
+            Bu sürüm yerleşik ~120 temel kelimeyle gelir. Tam 50.000+ kelime için
+            `scripts/build_db.py` ile DBNARY/FreeDict verisi işlenebilir.
+          files: app/build/outputs/apk/debug/tr-es-sozluk-*.apk
           draft: false
           prerelease: false
+          generate_release_notes: false

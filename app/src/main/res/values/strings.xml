@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">İspanyolca Sözlük</string>
+
+    <!-- Navigation -->
+    <string name="nav_search">Ara</string>
+    <string name="nav_favorites">Favoriler</string>
+    <string name="nav_word_of_day">Günün Kelimesi</string>
+    <string name="title_word_detail">Kelime Detayı</string>
+
+    <!-- Search -->
+    <string name="direction_es_tr">ES → TR</string>
+    <string name="direction_tr_es">TR → ES</string>
+    <string name="hint_search_es">İspanyolca kelime ara…</string>
+    <string name="hint_search_tr">Türkçe kelime ara…</string>
+    <string name="search_hint_message">Çevirisini görmek için bir kelime yazın</string>
+    <string name="no_results">Sonuç bulunamadı</string>
+
+    <!-- Detail -->
+    <string name="label_meaning">Anlamı</string>
+    <string name="label_examples">Örnek Cümleler</string>
+    <string name="cd_toggle_favorite">Favorilere ekle/çıkar</string>
+
+    <!-- Favorites -->
+    <string name="favorites_empty">Henüz favori kelime yok.\nBir kelimeyi favorilere eklemek için detay ekranındaki kalp simgesine dokunun.</string>
+
+    <!-- Word of day -->
+    <string name="btn_see_details">Detayları Gör</string>
+    <string name="btn_new_word">Yeni Kelime</string>
+</resources>
